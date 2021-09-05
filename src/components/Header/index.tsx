@@ -1,10 +1,11 @@
 import React from 'react';
+import * as Styles from './styles';
 
 const Header = () => {
   return (
-    <header>
+    <Styles.Header>
       <h1>HEADER</h1>
-    </header>
+    </Styles.Header>
   );
 };
 

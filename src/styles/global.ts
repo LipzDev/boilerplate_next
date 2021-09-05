@@ -13,7 +13,7 @@ const GlobalStyles: GlobalStyleComponent<
   GlobalStylesProps,
   DefaultTheme
 > = createGlobalStyle`
-  
+    
     * {
       margin: 0;
       padding: 0;
@@ -33,9 +33,9 @@ const GlobalStyles: GlobalStyleComponent<
       }
 
       body {
-        background: ${theme.colors.primary}
+        background: ${theme.colors.white};
+        font-family: ${theme.font.family};
         font-size: ${theme.font.sizes.medium};
-      };
     `}
   `;
 
