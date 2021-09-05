@@ -3,6 +3,11 @@ module.exports = {
     browser: true,
     es2021: true,
   },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
@@ -19,9 +24,10 @@ module.exports = {
     ecmaVersion: 12,
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', 'react-hooks', 'prettier'],
   rules: {
     'prettier/prettier': 'error',
+    'react/prop-types': 'off',
     'react/jsx-filename-extension': [
       'warn',
       { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
