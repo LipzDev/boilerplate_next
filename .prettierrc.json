@@ -3,7 +3,7 @@
   "endOfLine": "auto",
   "arrowParens": "always",
   "tabWidth": 2,
-  "semi": false,
+  "semi": true,
   "singleQuote": false,
-  "jsxSingleQuote": true
+  "jsxSingleQuote": false
 }
