@@ -1,12 +1,10 @@
-import React, { useContext } from "react";
-import { MenuMobileContext } from "../../Context";
+import React from "react";
 import * as Styles from "../Menu/styles";
+import { IconMenuProps } from "../IconMenu/index";
 
-const Menu = () => {
-  const { isOpen } = useContext<any>(MenuMobileContext);
-
+const Menu = ({ expanded }: IconMenuProps) => {
   return (
-    <Styles.Nav className={isOpen ? "active" : ""}>
+    <Styles.Nav className={expanded ? "active" : ""}>
       <ul>
         <li>
           <a href="#">Home</a>

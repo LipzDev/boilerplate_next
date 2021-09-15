@@ -1,20 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "../Container/styles";
-import Wrapper from "../Wrapper";
 import Logo from "../Logo";
 import Menu from "../Menu";
 import IconMenu from "../IconMenu";
 import * as Styles from "./styles";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <Styles.Header>
       <Container>
-        <Wrapper flex="spaceBetween">
+        <Styles.Content>
           <Logo />
-          <Menu />
-          <IconMenu />
-        </Wrapper>
+          <Menu expanded={isOpen} />
+          <IconMenu onClick={() => setIsOpen(!isOpen)} expanded={isOpen} />
+        </Styles.Content>
       </Container>
     </Styles.Header>
   );

@@ -6,7 +6,6 @@ import GlobalStyles from "../styles/global";
 import { ThemeProvider } from "styled-components";
 import { ApolloProvider } from "@apollo/client";
 import { useApollo } from "../graphql/client";
-import { MenuMobileProvider } from "../Context";
 
 function App({ Component, pageProps }: AppProps) {
   const client = useApollo(pageProps.initializeApolloState);
@@ -26,9 +25,7 @@ function App({ Component, pageProps }: AppProps) {
             ></link>
           </Head>
           <GlobalStyles />
-          <MenuMobileProvider>
-            <Component {...pageProps} />
-          </MenuMobileProvider>
+          <Component {...pageProps} />
         </ThemeProvider>
       </ApolloProvider>
     </>

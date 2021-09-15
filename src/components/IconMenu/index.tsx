@@ -1,16 +1,15 @@
-import React, { useContext, useState } from "react";
-import { MenuMobileContext } from "../../Context";
+import React from "react";
 import * as Styles from "./styles";
 
-const IconMenu = () => {
-  const { isOpen, setIsOpen } = useContext<any>(MenuMobileContext);
+export type IconMenuProps = {
+  onClick?: () => void;
+  expanded?: boolean;
+};
 
+const IconMenu = ({ onClick, expanded }: IconMenuProps) => {
   return (
     <>
-      <Styles.Icon
-        className={isOpen ? "active" : ""}
-        onClick={() => setIsOpen(!isOpen)}
-      >
+      <Styles.Icon className={expanded ? "active" : ""} onClick={onClick}>
         <span className="icon-1"></span>
         <span className="icon-2"></span>
         <span className="icon-3"></span>

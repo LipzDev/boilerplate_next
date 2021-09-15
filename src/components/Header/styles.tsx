@@ -6,3 +6,11 @@ export const Header = styled.header`
     padding: 10px 0;
   `}
 `;
+
+export const Content = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  `}
+`;
