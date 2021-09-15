@@ -5,11 +5,7 @@ import Layout from "../components/Layout";
 import Link from "next/link";
 
 const Home = (props: any) => {
-  return (
-    <Layout>
-      <h1>Conteudo</h1>
-    </Layout>
-  );
+  return <Layout>teste</Layout>;
 };
 
 export default Home;

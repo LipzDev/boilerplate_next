@@ -1,10 +1,13 @@
-import React from 'react';
+import React from "react";
+import { Container } from "../Container/styles";
+import * as Styles from "../Footer/styles";
+import { Wrapper } from "../Wrapper/styles";
 
 const Footer = () => {
   return (
-    <footer>
-      <h1>FOOTER</h1>
-    </footer>
+    <Styles.Footer>
+      <Container>© Lipz.</Container>
+    </Styles.Footer>
   );
 };
 
