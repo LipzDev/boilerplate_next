@@ -1,7 +1,6 @@
 import React from "react";
 import { Container } from "../Container/styles";
 import * as Styles from "../Footer/styles";
-import { Wrapper } from "../Wrapper/styles";
 
 const Footer = () => {
   return (
