@@ -1,16 +1,21 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import Head from "next/head";
 import type { AppProps } from "next/app";
 import theme from "../styles/theme";
 import GlobalStyles from "../styles/global";
 import { ThemeProvider } from "styled-components";
+import { ApolloProvider } from "@apollo/client";
+import { useApollo } from "../graphql/client";
 
 function App({ Component, pageProps }: AppProps) {
+  const client = useApollo(pageProps.initializeApolloState);
 
   return (
     <>
+      <ApolloProvider client={client}>
         <ThemeProvider theme={theme}>
           <Head>
-            <title>Blog | Home</title>
+            <title>Titulo</title>
             <link rel="shortcut icon" href="/img/icon-512.png" />
             <link rel="apple-touch-icon" href="/img/icon-512.png" />
             <link rel="manifest" href="/manifest.json" />
@@ -22,6 +27,7 @@ function App({ Component, pageProps }: AppProps) {
           <GlobalStyles />
           <Component {...pageProps} />
         </ThemeProvider>
+      </ApolloProvider>
     </>
   );
 }
