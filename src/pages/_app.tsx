@@ -4,15 +4,11 @@ import type { AppProps } from "next/app";
 import theme from "../styles/theme";
 import GlobalStyles from "../styles/global";
 import { ThemeProvider } from "styled-components";
-import { ApolloProvider } from "@apollo/client";
-import { useApollo } from "../graphql/client";
 
 function App({ Component, pageProps }: AppProps) {
-  const client = useApollo(pageProps.initializeApolloState);
 
   return (
     <>
-      <ApolloProvider client={client}>
         <ThemeProvider theme={theme}>
           <Head>
             <title>Titulo</title>
@@ -24,10 +20,9 @@ function App({ Component, pageProps }: AppProps) {
               rel="stylesheet"
             ></link>
           </Head>
-          <GlobalStyles />
           <Component {...pageProps} />
+          <GlobalStyles />
         </ThemeProvider>
-      </ApolloProvider>
     </>
   );
 }
