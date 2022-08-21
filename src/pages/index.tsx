@@ -1,8 +1,8 @@
 import React from "react";
-import HomeTemplate from "../templates/HomeTemplate";
+import Card from "../components/Card";
 
 const Home = () => {
-  return <HomeTemplate />;
+  return <Card hasGuidlines={true} cardType={"REGULACAO"} />;
 };
 
 export default Home;
